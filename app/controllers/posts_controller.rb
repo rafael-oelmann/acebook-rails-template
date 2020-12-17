@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authorize, only: [:edit, :update]
   def new
     @post = Post.new
   end
