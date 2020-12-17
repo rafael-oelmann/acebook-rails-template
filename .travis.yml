@@ -13,8 +13,8 @@ before_install:
 before_script:
   - bundle install --jobs=3 --retry=3
   - yarn
-  - bundle exec rake db:create
-  - bundle exec rake db:schema:load
+  - rake db:create
+  - rake db:schema:load
 script:
-  - bundle exec rake test
-  - bundle exec rake test:system
+  - rake test
+  - rake test:system
