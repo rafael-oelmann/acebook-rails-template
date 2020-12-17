@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'travis'
 gem 'railties', '~> 6.0.3.4'
+gem 'webpacker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
