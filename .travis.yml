@@ -18,13 +18,15 @@ language: ruby
 # script:
 #   - bundle exec rpsec
 
-install:
- - bundle update --bundler
- - bundle install
+rvm:
+ - 2.7.0
+ - jruby
 services:
  - postgresql
 script:
+ - gem install bundler:2.1.4
+ - bundle update --bundler
+ - bundle install
  - bundle exec rails db:create
  - bundle exec rails db:migrate
- - bundle exec rails db:environment:set RAILS_ENV=test
  - bundle exec rspec
